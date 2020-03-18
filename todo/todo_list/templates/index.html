@@ -27,7 +27,7 @@
 		{% if items.completed %}
 		<tr>
 			<td>&#10154;</td>
-			<td>{{ items.todo }}</td>
+			<td class="striker">{{ items.todo }}</td>
 			<td>
 				<a href="{% url 'uncross' items.id %}">
 				&#9745;</a>
