@@ -1,4 +1,9 @@
 .striker {
-	text-decoration-color: red;
+	text-decoration-color: #E0FFFF;
 	text-decoration-line: line-through;
+	text-shadow: currentColor;
+}
+
+.color {
+	text-shadow: currentColor;
 }
