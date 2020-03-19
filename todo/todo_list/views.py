@@ -42,10 +42,13 @@ def uncross(request, todo_id):
 def edit(request, todo_id):
 	if request.method == 'POST':
 		todo = todos.objects.get(pk=todo_id)
-
 		form = ToDoForm(request.POST or None, instance=todo)
 
-		if form.is_valid():
+		if request.POST['todo'] == '':
+			all_items = todos.objects.all
+			messages.error(request, ('Invalid Todo !!'))
+			return render(request, 'index.html', {'all_items' : all_items})
+		elif form.is_valid():
 			form.save()
 			messages.success(request, ('Todo Has been changed successfully !!'))
 			return redirect('index')
