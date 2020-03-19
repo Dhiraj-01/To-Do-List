@@ -53,3 +53,6 @@ def edit(request, todo_id):
 	else :
 		todo = todos.objects.get(pk=todo_id)
 		return render(request, 'edit.html', {'todo': todo})
+
+def login(request):
+	return render(request, 'login.html')

@@ -7,4 +7,5 @@ urlpatterns = [
     path('cross_off/<todo_id>', views.cross_off, name="cross_off"),
     path('uncross/<todo_id>', views.uncross, name="uncross"),
     path('edit/<todo_id>', views.edit, name="edit"),
+    path('login',views.login, name="login")
 ]
