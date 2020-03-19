@@ -30,9 +30,9 @@
 			<td class="striker">{{ items.todo }}</td>
 			<td>
 				<a href="{% url 'uncross' items.id %}">
-				&#9745;</a>
+				&#9745;UnCross</a>
 			</td>
-			<td>&#9997;</td>
+			<td><a href="{% url 'edit' items.id %}">&#9997;Edit</a></td>
 			<td>
 				<a href="{% url 'delete' items.id %}">&#128465;Delete</a>
 			</td><br>
@@ -43,9 +43,9 @@
 			<td>{{ items.todo }}</td>
 			<td>
 				<a href="{% url 'cross_off' items.id %}">
-				&#9744;</a>
+				&#9744;Cross Off</a>
 			</td>
-			<td>&#9997;</td>
+			<td><a href="{% url 'edit' items.id %}">&#9997;Edit</a></td>
 			<td>
 				<a href="{% url 'delete' items.id %}">&#128465;Delete</a>
 			</td><br>

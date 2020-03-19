@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if todo %}
+	<form class="form-inline my-2 my-lg-0" method="POST">
+		{% csrf_token %}
+		
+		<input class="form-control mr-sm-2" type="search" name="todo" value="{{ todo.todo }}" placeholder="{{ todo.todo }}" aria-label="Search">
+		
+		<input type="hidden" value="{{ todo.completed }}" name="completed">
+
+		<button class="btn btn-outline-secondary my-2my-sm-0">Edit Todo</button>
+		
+	</form>
+{% endif %}
+{% endblock %}
